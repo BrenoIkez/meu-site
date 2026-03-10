@@ -6,8 +6,6 @@ body {
   font-family: 'Montserrat', Arial, sans-serif;
   color: white;
   text-align: center;
-  background: url('neblina.jpg') no-repeat center center fixed;
-  background-size: cover;
 }
 
 ul.icons {
