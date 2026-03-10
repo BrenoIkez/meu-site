@@ -6,7 +6,7 @@ body {
   font-family: 'Montserrat', Arial, sans-serif;
   color: white;
   text-align: center;
-  background: url('') no-repeat center center fixed;
+  background: url('neblina.jpg') no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -29,7 +29,7 @@ ul.icons li a.btn {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #222, #33333313);
+  background: linear-gradient(135deg, #222, rgba(51, 51, 51, 0.07));
   color: #49aa9d;
   text-decoration: none;
   transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
@@ -68,16 +68,18 @@ ul.icons li a.btn:focus {
   border: 3px solid transparent;
   background-clip: padding-box, border-box;
   background-origin: border-box;
-  background-image: linear-gradient(135deg, rgba(0,0,0,0.55), rgba(30,30,30,0.65)),
-                    linear-gradient(90deg, #00a5a571, #00949e25, #00a5a571, #00949e25);
-  background-size: cover, 300% 300%;
+  background-image: 
+    linear-gradient(135deg, rgba(0,0,0,0.55), rgba(30,30,30,0.65)),
+    linear-gradient(90deg, rgba(255,255,255,0.5), rgba(179,179,179,0.15), rgba(255,255,255,0.5), rgba(179,179,179,0.15)),
+    linear-gradient(90deg, rgba(0,165,165,0.44), rgba(0,148,158,0.15), rgba(0,165,165,0.44), rgba(0,148,158,0.15));
+  background-size: cover, 300% 300%, 300% 300%;
   animation: borderGradient 6s linear infinite;
 }
 
 @keyframes borderGradient {
-  0% { background-position: 0% 50%, 0% 50%; }
-  50% { background-position: 100% 50%, 100% 50%; }
-  100% { background-position: 0% 50%, 0% 50%; }
+  0% { background-position: 0% 50%, 0% 50%, 0% 50%; }
+  50% { background-position: 100% 50%, 100% 50%, 100% 50%; }
+  100% { background-position: 0% 50%, 0% 50%, 0% 50%; }
 }
 
 .banner h1 {
@@ -102,30 +104,4 @@ ul.icons li a.btn:focus {
 .muted {
   color: rgba(142, 153, 150, 0.514);
   font-weight: 400;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translate(-50%, -60%); }
-  to { opacity: 1; transform: translate(-50%, -50%); }
-}
-
-#bg-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  min-width: 100vw;
-  min-height: 100vh;
-  width: auto;
-  height: auto;
-  z-index: -1;
-  object-fit: cover;
-}
-
-/* Conteúdo acima do vídeo */
-.conteudo {
-  position: relative;
-  z-index: 1;
-  color: white;
-  text-align: center;
-  margin-top: 30vh;
 }
